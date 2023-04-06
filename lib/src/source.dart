@@ -4,10 +4,8 @@ import 'package:flutter/material.dart';
 class Helper {
   const Helper(this.value);
 
-  static var regex = new RegExp(  r"^(?:https?|ftp):\/\/[^\s/$.?#].[^\s]*$",
-      caseSensitive: false,
-      multiLine: false);
-
+   static var regex = new RegExp(
+      r"((https?:www\.)|(https?:\/\/)|(www\.))?[\w/\-?=%.][-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9]{1,6}(\/[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)?");
 
   static var phoneRegex = new RegExp(r"(^(?:[+0]9)?[0-9]{10,12}$)");
 
